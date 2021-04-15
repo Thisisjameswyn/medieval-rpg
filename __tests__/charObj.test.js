@@ -5,11 +5,13 @@ describe('Character', () => {
   test('should instantiate a new basic char object', () => {
     let myChar = new Character();
     expect(myChar).toBeDefined();
-  });
+  })
+  
   test('should instantiate character by type', () => {
     let myChar = new Character("warrior");
     expect(myChar.myType).toEqual("warrior");
   })
+
   test('should instantiate character with empty stat array', () => {
     const compArray = [];
     let myChar = new Character("warrior");
@@ -41,6 +43,60 @@ describe('Character.checkType', () => {
     let myChar = new Character("archer")
     myChar.checkType(myChar.myType);
     expect(myChar.myStats).toEqual([70, 20, 45])
+  })
+
+  test('it should return vampire attributes to character object', () => {
+    let myChar = new Character("vampire")
+    myChar.checkType(myChar.myType);
+    expect(myChar.myStats).toEqual([80, 30, 15])
+  })
+
+  test('it should return ghoul attributes to character object', () => {
+    let myChar = new Character("ghoul")
+    myChar.checkType(myChar.myType);
+    expect(myChar.myStats).toEqual([60, 25, 30])
+  })
+
+  test('it should return dragon attributes to character object', () => {
+    let myChar = new Character("dragon")
+    myChar.checkType(myChar.myType);
+    expect(myChar.myStats).toEqual([200, 40, 70])
+  })
+
+  test('it should return zombie attributes to character object', () => {
+    let myChar = new Character("zombie")
+    myChar.checkType(myChar.myType);
+    expect(myChar.myStats).toEqual([20, 10, 10])
+  })
+
+  test('it should return litterbug attributes to character object', () => {
+    let myChar = new Character("litterbug")
+    myChar.checkType(myChar.myType);
+    expect(myChar.myStats).toEqual([20, 5, 10])
+  })
+
+  test('it should return fiend attributes to character object', () => {
+    let myChar = new Character("fiend")
+    myChar.checkType(myChar.myType);
+    expect(myChar.myStats).toEqual([50, 20, 30])
+  })
+
+  test('it should return blob attributes to character object', () => {
+    let myChar = new Character("blob")
+    myChar.checkType(myChar.myType);
+    expect(myChar.myStats).toEqual([50, 15, 5])
+  })
+
+  test('it should return thrall attributes to character object', () => {
+    let myChar = new Character("thrall")
+    myChar.checkType(myChar.myType);
+    expect(myChar.myStats).toEqual([40, 20, 10])
+  })
+
+  test('it should return ghost attributes to character object', () => {
+    let myChar = new Character("ghost")
+    myChar.checkType(myChar.myType);
+    expect(myChar.myStats).toEqual([40, 20, 60])
   })
 });
 

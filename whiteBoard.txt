@@ -19,7 +19,10 @@ class CharBase {
 
 
 //each class needs to inherit from base but also have its own attributes
+
 //need methods for dealing damage, healing, health value, attack value, attack type, death condition.
+
 //need enemy or monster class, inherit from base with attributes
+
 //inventory - array with weight or index limit
 // 
